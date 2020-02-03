@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1031040333517",
+    "firebase_url": "https://tripme-genic.firebaseio.com",
+    "project_id": "tripme-genic",
+    "storage_bucket": "tripme-genic.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1031040333517:android:f62ca05e58826522371b84",
+        "android_client_info": {
+          "package_name": "com.example.tripme"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1031040333517-mcpeimvq3v7aqbvnpj8om58pdefa3h3a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.tripme",
+            "certificate_hash": "ae30cb61d71242bb804fce81becce5a67a17eff3"
+          }
+        },
+        {
+          "client_id": "1031040333517-asqpuinnt8acbgjpvufq5s0u31itkhet.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBcwW1YfYoqn2bVKZNmNsLAF94xcRWw-0o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1031040333517-asqpuinnt8acbgjpvufq5s0u31itkhet.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
