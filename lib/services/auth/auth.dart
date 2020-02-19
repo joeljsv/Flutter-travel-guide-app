@@ -1,40 +1,16 @@
-import 'package:google_sign_in/google_sign_in.dart';
-import 'package:tripme/models/user.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 
-class AuthService {
-  final FirebaseAuth _auth = FirebaseAuth.instance;
-
-  User Function(FirebaseUser event) get _userFromFirebaseUser => null;
-  
-
-  // create user obj based on firebase use
-  User _userFromFIrebaseUser(FirebaseUser user){
-    return user !=null?User(uid: user.uid ):null;
-  }
-Stream<User> get user {
-    return _auth.onAuthStateChanged
-      //.map((FirebaseUser user) => _userFromFirebaseUser(user));
-      .map(_userFromFirebaseUser);
-      
-  }
-  // auth change user stream
-  
-
-  // sign in anon
-  Future signInAnon() async {
-    try {
-      AuthResult result = await _auth.signInAnonymously();
-      FirebaseUser user = result.user;
-      return _userFromFIrebaseUser(user);
-    } catch (e) {
-      print(e.toString());
-      return null;
-    }
-  }
-  final GoogleSignIn googleSignIn = GoogleSignIn();
+final FirebaseAuth _auth = FirebaseAuth.instance;
+final GoogleSignIn googleSignIn = GoogleSignIn();
+String name;
+String email;
+String imageUrl;
 
 Future<String> signInWithGoogle() async {
+// Add the following lines after getting the user
+// Checking if email and name is null
+
   final GoogleSignInAccount googleSignInAccount = await googleSignIn.signIn();
   final GoogleSignInAuthentication googleSignInAuthentication =
       await googleSignInAccount.authentication;
@@ -49,27 +25,24 @@ Future<String> signInWithGoogle() async {
 
   assert(!user.isAnonymous);
   assert(await user.getIdToken() != null);
- 
 
   final FirebaseUser currentUser = await _auth.currentUser();
   assert(user.uid == currentUser.uid);
- _userFromFIrebaseUser(user);
-  return 'signInWithGoogle succeeded: '+ user.displayName;
-  
+  assert(user.email != null);
+  assert(user.displayName != null);
+  assert(user.photoUrl != null);
+
+  name = user.displayName;
+  email = user.email;
+  imageUrl = user.photoUrl;
+
+// Only taking the first part of the name, i.e., First Name
+
+  return 'signInWithGoogle succeeded: $user';
 }
 
-void signOutGoogle() async{
+void signOutGoogle() async {
   await googleSignIn.signOut();
 
   print("User Sign Out");
 }
-
-  // sign in with email and password
-
-  // register with email and password
-
-  // sign out
-
-}
-
-

@@ -14,28 +14,53 @@ description: A new Flutter project.
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.1.0 <3.0.0"
+  sdk: ">=2.6.0 <3.0.0"
 
 dependencies:
+  flutter_icons:
   firebase_core:
   provider:
   firebase_auth:
   cloud_firestore:
   google_sign_in:
+  simple_animations:
+  google_maps_flutter:
+  image_picker:
+  firebase_storage: ^3.0.3
+  firebase_messaging: ^5.1.1
+  geolocator: ^5.2.1
+  font_awesome_flutter: ^8.5.0
+
+  http: ^0.12.0+1
+  json_serializable: ^2.0.2
+
   flutter:
     sdk: flutter
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
+  google_fonts: ^0.3.8
+
+  flappy_search_bar: 1.4.1
 
 dev_dependencies:
+  pedantic: ^1.4.0
+  build_runner: ^1.2.7
+  outline_material_icons: ^0.1.0
+  timeago: ^2.0.14
+  carousel_slider:
+  syncfusion_flutter_charts: ^17.3.26
+  charts_flutter: ^0.8.1
+
   flutter_test:
     sdk: flutter
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
-
+analyzer:
+  enable-experiment:
+    - extension-methods
 # The following section is specific to Flutter.
 flutter:
   # The following line ensures that the Material Icons font is
@@ -47,8 +72,11 @@ flutter:
     - assets/home.png
     - assets/house.png
     - assets/mountain.png
+    - assets/google.png
     - assets/plane.png
     - assets/world.png
+    - assets/images/
+    - assets/front/images/
 
   # To add assets to your application, add an assets section, like this:
   # assets:
@@ -73,6 +101,12 @@ flutter:
         - asset: assets/fonts/Lato-Bold.ttf
         - asset: assets/fonts/Flamante-Roma-MediumItalic.ttf
           style: italic
+    - family: FlamanteRoma
+      fonts:
+        - asset: assets/fonts/Comfortaa-Bold.ttf
+        - asset: assets/fonts/Comfortaa-Light.ttf
+        - asset: assets/fonts/Comfortaa-Medium.ttf
+          weight: 400
   # To add assets to your application, add an assets section, like this:
   # assets:
   #  - images/a_dot_burr.jpeg

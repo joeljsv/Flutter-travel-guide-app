@@ -108,7 +108,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-        Navigator.pushReplacementNamed(context, SignIn.routeName);
+        Navigator.pushReplacementNamed(context, HomePage.routeName);
         },
         backgroundColor: Colors.transparent,
         elevation: 0.00,

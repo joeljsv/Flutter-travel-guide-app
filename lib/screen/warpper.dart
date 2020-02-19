@@ -3,7 +3,7 @@ import 'package:tripme/models/user.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import 'Home.dart';
+// import 'Home.dart';
 import 'onbor.dart';
 
 class Wrapper extends StatelessWidget {
@@ -17,7 +17,7 @@ class Wrapper extends StatelessWidget {
     if (user == null){
       return MyHomePage();
     } else {
-      return HomePage();
+    //   return HomePage();
     }
     
   }

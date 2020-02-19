@@ -9,6 +9,8 @@
         android:name="io.flutter.app.FlutterApplication"
         android:label="tripme"
         android:icon="@mipmap/ic_launcher">
+        <meta-data android:name="com.google.android.geo.API_KEY"
+               android:value="AIzaSyDCumI_ypnN7W87hYg0jCp6f0Q0Y8Whwjk"/>
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
@@ -19,7 +21,10 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
+            
+   <action android:name="FLUTTER_NOTIFICATION_CLICK" />  
+   <category android:name="android.intent.category.DEFAULT" />  
+</intent-filter>  
         </activity>
         <!-- Don't delete the meta-data below.
              This is used by the Flutter tool to generate GeneratedPluginRegistrant.java -->
