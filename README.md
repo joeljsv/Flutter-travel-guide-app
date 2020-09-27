@@ -13,7 +13,7 @@ A few resources to get you started if this is your first Flutter project:
 
 ##### Integration
 ### Step 1: Create a Firebase project
-..*[Click here to follow](https://medium.com/flutterpub/firebase-integration-in-flutter-application-bb1c5f4a0eb9) till **SHA-1 Key**.
+..*[Click here to follow](https://medium.com/flutterpub/firebase-integration-in-flutter-application-bb1c5f4a0eb9) till **SHA-1 Key**...*
 ### Step 2:**Run the App**
 
 For help getting started with Flutter, view our
